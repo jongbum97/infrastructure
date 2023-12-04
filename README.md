@@ -1,4 +1,4 @@
-# 📖 EnjoyTrip_Final_Seoul_15 TATI
+<!-- # 📖 EnjoyTrip_Final_Seoul_15 TATI
 
 ![TATI메인페이지](https://lab.ssafy.com/kbumk1234/enjoytrip_framework/-/raw/master/EnjoyTrip_FrontEnd_seoul_15/src/assets/images/TATI_logo.jpg?ref_type=heads)
 
@@ -314,4 +314,4 @@ EnjoyTrip_FrontEnd_seoul_15
 ├─ vite.config.js
 └─ vitest.config.js
 
-```
+``` -->
