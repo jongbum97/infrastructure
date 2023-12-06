@@ -91,24 +91,7 @@
 		    <groupId>org.glassfish.jaxb</groupId>
 		    <artifactId>jaxb-runtime</artifactId>
 		</dependency>
-		
-		<!-- Spring socket -->
-		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-websocket</artifactId>
-		</dependency>
-		
-		<!-- Jackson -->
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.15.2</version>
-		</dependency>
-		
-		
 	</dependencies>
-	
-	
 
 	<!-- 콘솔환경에서 maven빌드  -->
 	<build>
