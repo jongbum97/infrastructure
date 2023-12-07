@@ -9,6 +9,12 @@ const router = createRouter({
       meta: {withoutLogin: true},
       component: () => import('@/views/MainView.vue')
     },
+    {
+      path: '/chat',
+      name: 'chat',
+      meta: {withoutLogin: true},
+      component: () => import('@/views/ChatView.vue')
+    },
   ]
 })
 
