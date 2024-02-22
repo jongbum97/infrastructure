@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  tati_front:
+    build:
+      context: ./TATI/EnjoyTrip_FrontEnd_seoul_15
+      dockerfile: Dockerfile
+    ports:
+      - "8001:80"
+
+  tati_back:
+    build:
+      context: ./TATI/EnjoyTrip_Framework_seoul_15
+      dockerfile: Dockerfile
+    volumes:
+      - /home/ubuntu/files:/home/ubuntu/files
+    ports:
+      - "8888:8888"
+
+  ralomok:
+    build:
+      context: ./Ralomok
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
