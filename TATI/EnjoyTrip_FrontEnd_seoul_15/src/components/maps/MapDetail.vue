@@ -97,7 +97,7 @@ const likeCancel = async () => {
 </script>
 
 <template>
-    <div class="row mb-5 justify-content-center">
+    <div class="mb-5 justify-content-center">
         <div class="col-lg-6 text-center">
             <h1 class="section-title text-center mb-3 mt-5">관광지 정보 상세보기</h1>
             <p>
