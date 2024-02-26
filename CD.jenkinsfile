@@ -44,7 +44,7 @@ pipeline {
                 }
             }
             
-            stage('start continer'){
+            stage('start container'){
                 steps{
                     echo 'start container~!'
                     dir('infrastructure'){
