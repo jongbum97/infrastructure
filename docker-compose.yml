@@ -2,25 +2,19 @@ version: '3'
 
 services:
   tati_front:
-    build:
-      context: ./TATI/EnjoyTrip_FrontEnd_seoul_15
-      dockerfile: Dockerfile
+    image: tati_fe
     ports:
       - "8001:80"
       - "443:443"
 
   tati_back:
-    build:
-      context: ./TATI/EnjoyTrip_Framework_seoul_15
-      dockerfile: Dockerfile
+    image: tati_be
     volumes:
       - /home/ubuntu/files:/home/ubuntu/files
     ports:
       - "8888:8888"
 
   ralomok:
-    build:
-      context: ./Ralomok
-      dockerfile: Dockerfile
+    image: ralomok
     ports:
       - "8080:8080"

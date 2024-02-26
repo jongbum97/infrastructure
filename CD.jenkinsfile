@@ -1,0 +1,57 @@
+pipeline {
+
+    agent any 
+
+    stages {
+            
+            stage('Git clone') { 
+                steps {
+                    echo 'Git clone!'
+                    dir(''){
+                        sh 'rm -rf infrastructure || true'
+                        sh 'git clone https://github.com/jongbum97/infrastructure.git'
+                        
+                        sh 'docker-compose down --rmi all || true'
+                        sh 'docker image prune -f || true'
+                    }
+                }
+            }
+           
+            stage('Ralomok') { 
+                steps {
+                    echo 'Ralomok build!'
+                    dir('infrastructure/Ralomok'){
+                        sh 'docker build -t ralomok .'
+                    }
+                }
+            }
+            
+            stage('tati_FE'){
+                steps {
+                    echo 'tati_FE build!'
+                    dir('infrastructure/TATI/EnjoyTrip_FrontEnd_seoul_15'){
+                        sh 'docker build -t tati_fe .'
+                    }
+                }
+            }   
+            
+            stage('tati_BE'){
+                steps {
+                    echo 'tati_BE build!'
+                    dir('infrastructure/TATI/EnjoyTrip_Framework_seoul_15'){
+                        sh 'docker build -t tati_be .'
+                    }
+                }
+            }
+            
+            stage('start continer'){
+                steps{
+                    echo 'start container~!'
+                    dir('infrastructure'){
+                        sh 'docker-compose up -d'
+                    }
+                }
+            }
+        
+    }
+}
