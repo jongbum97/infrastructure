@@ -48,7 +48,7 @@ pipeline {
                 steps{
                     echo 'start container~!'
                     dir('infrastructure'){
-                        sh 'docker-compose up'
+                        sh 'docker-compose up -d'
                     }
                 }
             }
