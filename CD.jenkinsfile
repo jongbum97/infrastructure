@@ -58,7 +58,10 @@ pipeline {
     post {
         success {
             echo 'stages success!'
-            sh 'docker logs -f tati_be'
+            // sh 'docker logs -f tati_be'
+        }
+        failure {
+            echo 'stages fail!'
         }
     }
 }
