@@ -2,12 +2,14 @@ version: '3'
 
 services:
   tati_front:
+    container_name: tati_fe
     image: tati_fe
     ports:
       - "8001:80"
       - "443:443"
 
   tati_back:
+    container_name: tati_be
     image: tati_be
     volumes:
       - /home/ubuntu/files:/home/ubuntu/files
@@ -15,6 +17,7 @@ services:
       - "8888:8888"
 
   ralomok:
+    container_name: ralomok
     image: ralomok
     ports:
       - "8080:8080"
