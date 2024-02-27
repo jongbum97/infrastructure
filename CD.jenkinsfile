@@ -49,17 +49,16 @@ pipeline {
                     echo 'start container~!'
                     dir('infrastructure'){
                         sh 'docker-compose up -d'
-                        sh 'docker logs -f tati_be'
                     }
                 }
             }
         
     }
 
-    // post {
-    //     success {
-    //         echo 'stages success!'
-    //         sh 'docker logs -f tati_be'
-    //     }
-    // }
+    post {
+        success {
+            echo 'stages success!'
+            sh 'docker logs -f tati_be'
+        }
+    }
 }
